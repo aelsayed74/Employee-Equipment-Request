@@ -1,0 +1,10 @@
+<odoo>
+    <data>  
+        <record id="Equpiment_sequence" model="ir.sequence">
+            <field name="name">Equpiment Seq.</field>
+            <field name="code">equipment_sequence</field>
+            <field name="prefix">ER</field>
+            <field name="padding">5</field>
+        </record>
+    </data>
+</odoo>

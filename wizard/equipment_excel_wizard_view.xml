@@ -1,0 +1,39 @@
+<odoo>
+    <record id="view_equipment_excel_wizard_form" model="ir.ui.view">
+        <field name="name">equipment.excel.wizard.form</field>
+        <field name="model">equipment.excel.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Export Equipment Report to Excel">
+                <sheet>
+                    <div class="alert alert-info" role="alert">
+                        Select filters below to customize your Excel report. Leave blank to export all records.
+                    </div>
+                    <group>
+                        <group string="Date Range">
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                        </group>
+                        <group string="Employee Filter">
+                            <field name="employee_id" options="{'no_create': True, 'no_edit': True}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_generate_excel" string="Export Excel" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_equipment_excel_wizard" model="ir.actions.act_window">
+        <field name="name">Export Excel Report</field>
+        <field name="res_model">equipment.excel.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field> </record>
+
+    <menuitem id="menu_equipment_excel_report"
+              name="Excel Reporting"
+              parent="employee_equipment_request.employee_request_root_menu" action="action_equipment_excel_wizard"
+              sequence="50"/>
+</odoo>

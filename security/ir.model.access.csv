@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_employee_equipment_request_manager_group,access_employee_equipment_request_,model_employee_equipment_request,employee_equipment_request.employee_equipment_manager_group,1,1,1,1
+access_employee_equipment_request_user_group,access_employee_equipment_request,model_employee_equipment_request,,1,1,1,0
+access_reject_request_all,access.reject.request.all,model_reject_request,,1,1,1,1
+access_equipment_excel_wizard,equipment.excel.wizard,model_equipment_excel_wizard,,1,1,1,1

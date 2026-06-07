@@ -1,0 +1,7 @@
+<odoo>
+    <menuitem
+        id = "employee_request_root_menu"
+        name = "Employee Request"
+        groups="employee_equipment_request.employee_equipment_manager_group,employee_equipment_request.employee_equipment_user_group"
+    />
+</odoo>
